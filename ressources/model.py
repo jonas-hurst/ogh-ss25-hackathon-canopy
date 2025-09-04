@@ -34,10 +34,6 @@ def train_loop(device, dataloader, ml_model, loss_fn, optimizer):
         optimizer.zero_grad()
 
 
-        # if batch % 50 == 0:
-        #     loss, current = loss.item(), (batch + 1) * len(X)
-        #     print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
-
 
 def test_loop(device, validation_loader, training_loader, ml_model, loss_fn, n_epoch):
     num_batches_train = len(training_loader)
