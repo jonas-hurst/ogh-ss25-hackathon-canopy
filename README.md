@@ -8,6 +8,9 @@ value as a proxy for canopy heihgt.
 
 Details for this hackathon can be found on [kaggle](https://www.kaggle.com/competitions/canopy-height-mapping-using-google-aef-embeddings/overview)
 
+Thanks to the awesome people at [OpenGeoHub](https://opengeohub.org/) in the Netherlands for organizing this 
+summer school and the hackathon!
+
 ## Approach
 
 To estimate canopy height, I use a simple MLP using an input layer, one hidden layer,
