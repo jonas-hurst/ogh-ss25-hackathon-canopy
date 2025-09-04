@@ -19,7 +19,7 @@ To run the script follow these steps:
 
 1. Clone this repository: `git clone git@github.com:jonas-hurst/ogh-ss25-hackathon-canopy.git`
 2. Install the environment using [uv](https://docs.astral.sh/uv/getting-started/installation/):
-   `uv init` (Could take some time as pytorch is big...)
+   `uv sync` (Could take some time as pytorch is big...)
 3. Then activate the environment:
    - Linux: `source .venv/bin/activate`
    - For Windows (cmd): `.venv/bin/activate.bat`
