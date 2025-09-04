@@ -41,19 +41,19 @@ def test_loop(device, validation_loader, training_loader, ml_model, loss_fn, n_e
 
     ml_model.eval()
 
-    train_loss = 0
     test_loss = 0
+    train_loss = 0
 
     with torch.no_grad():
-        for X, y in validation_loader:
-            X, y = X.to(device), y.to(device)
-            pred = ml_model(X)
-            test_loss += loss_fn(pred, y).item()
+        for X_val, y_val in validation_loader:
+            X_val, y_val = X_val.to(device), y_val.to(device)
+            pred = ml_model(X_val)
+            test_loss += loss_fn(pred, y_val).item()
 
-        for X, y in training_loader:
-            X, y = X.to(device), y.to(device)
-            pred = ml_model(X)
-            train_loss += loss_fn(pred, y).item()
+        for X_train, y_train in training_loader:
+            X_train, y_train = X_train.to(device), y_train.to(device)
+            pred = ml_model(X_train)
+            train_loss += loss_fn(pred, y_train).item()
 
     test_loss /= num_batches_val
     train_loss /= num_batches_train
